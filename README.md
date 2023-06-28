@@ -34,17 +34,17 @@
 ***
 ## 📌 주요 개발 기능
 #### 회원가입 제약 조건
-* 각 칼럼마다 정규표현식을 적용하여 이에 해당하지 않는 데이터가 입력된 경우 알림창이 뜨도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/961fc6c3eb31924c7c1f5d987e011bf332ede28c/src/main/webapp/js/regEx.js#L5-L95">코드보기<a>**
-* 중복이 불가능하도록 설정한 칼럼은 중복되는 데이터가 이미 존재하는지 확인한 후 사용이 가능하도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L145-L179">코드보기<a>**
+* 각 칼럼마다 정규표현식을 적용하여 이에 해당하지 않는 데이터가 입력된 경우 알림창이 뜨도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/961fc6c3eb31924c7c1f5d987e011bf332ede28c/src/main/webapp/js/regEx.js#L5-L95">🔗코드보기<a>**
+* 중복이 불가능하도록 설정한 칼럼은 중복되는 데이터가 이미 존재하는지 확인한 후 사용이 가능하도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L145-L179">🔗코드보기<a>**
 
-#### 아이디/비밀번호 찾기 - <a href="https://github.com/nireah/chagawa/blob/c907f44ec21c3ea2997d4e64d5c28e610dd25777/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L182-L242">코드보기<a>
+#### 아이디/비밀번호 찾기 - <a href="https://github.com/nireah/chagawa/blob/c907f44ec21c3ea2997d4e64d5c28e610dd25777/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L182-L242">🔗코드보기<a>
 * 이름, 연락처 등의 정보를 입력하여 이것과 회원 정보가 일치할 경우 아이디 또는 비밀번호를 알려주도록 구현함.
 
 #### 검색 및 페이징 처리
-* 검색 키를 선택한 후 검색어를 입력하도록 하여 특정 칼럼에 해당되는 정보만 검색할 수 있도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L526-L624">코드보기<a>**
-* 페이지 당 보여지는 게시글 수를 선택할 수 있도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/webapp/WEB-INF/views/member/list.jsp#L98-L107">코드보기<a>**
+* 검색 키를 선택한 후 검색어를 입력하도록 하여 특정 칼럼에 해당되는 정보만 검색할 수 있도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/dao/MemberDAOImpl.java#L526-L624">🔗코드보기<a>**
+* 페이지 당 보여지는 게시글 수를 선택할 수 있도록 구현함. - **<a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/webapp/WEB-INF/views/member/list.jsp#L98-L107">🔗코드보기<a>**
 
-#### 이미지 수정 / 기본이미지로 변경 - <a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/controller/MemberController.java#L404-L433">코드보기<a>
+#### 이미지 수정 / 기본이미지로 변경 - <a href="https://github.com/nireah/chagawa/blob/ac0521b93c60d6240850106ba68c9ee12d831d60/src/main/java/com/chagawa/member/controller/MemberController.java#L404-L433">🔗코드보기<a>
 * MultipartRequest를 이용하여 파일 선택을 통해 이미지를 업로드 하도록 구현함.
 * ‘기본이미지로 변경’ 버튼을 클릭할 경우 미리 설정해 놓은 이미지로 변경되도록 구현함.
 
