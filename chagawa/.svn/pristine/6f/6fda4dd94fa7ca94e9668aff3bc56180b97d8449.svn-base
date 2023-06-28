@@ -1,0 +1,45 @@
+package com.chagawa.main;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.chagawa.message.controller.MessageController;
+import com.chagawa.message.dao.MessageDAOImpl;
+import com.chagawa.message.service.MessageListServiceImpl;
+import com.chagawa.messageRoom.controller.MessageRoomController;
+import com.chagawa.messageRoom.dao.MessageRoomDAOImpl;
+import com.chagawa.messageRoom.service.MessageRoomListServiceImpl;
+
+
+public class Init {
+	// 컨트롤러, DAO, 서비스를 담을 맵 생성
+	private static Map<String, Object> controllerMap = new HashMap<>();
+	private static Map<String, Object> daoMap = new HashMap<>();
+	private static Map<String, ServiceInterface> serviceMap = new HashMap<>();
+	public static void init() {
+
+		// 컨트롤러 등록
+		controllerMap.put("messageController", new MessageController());
+		controllerMap.put("messageRoomController", new MessageRoomController());
+		// DAO 등록
+		daoMap.put("messageDAO", new MessageDAOImpl());
+		daoMap.put("messageDAO", new MessageRoomDAOImpl());
+		
+		serviceMap.put("memberListServiceImpl", new MessageListServiceImpl());
+		serviceMap.put("memberRoomListServiceImpl", new MessageRoomListServiceImpl());
+		
+		// 서비스 등록
+		serviceMap.get("messageListServiceImpl").setDao(daoMap.get("messageDAO"));
+		serviceMap.get("messageRoomListServiceImpl").setDao(daoMap.get("messageRoomDAO"));
+
+		// 각 서비스에 DAO 연결
+		((MessageController) controllerMap.get("messageController")).setMessageListService(serviceMap.get("messageListServiceImpl"));
+		((MessageRoomController) controllerMap.get("memberController")).setMessageRoomListService(serviceMap.get("memberListServiceImpl"));
+		// 각 컨트롤러에 서비스 연결
+	}
+		public static Object getController(String controller) {
+			return controllerMap.get(controller);
+		}
+
+	
+}
